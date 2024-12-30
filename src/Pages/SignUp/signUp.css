@@ -1,0 +1,101 @@
+.signUp {
+    margin-top: 56px;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.signup_card {
+    width: 40%;
+    border: 1px solid;
+    padding: 15px 25px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.5px 0.5px 8px white;
+}
+
+.signUp_title {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 32px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.signUp_Inputs {
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.signUp_Inputs_inp {
+    width: 60%;
+    height: 40px;
+    color: white;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222222;
+}
+
+.image_upload_signup {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start; /* Ensures alignment */
+    margin-left: 68px; /* Adjust this value to move the file input to the right */
+}
+
+.image_upload_signup_div {
+    width: 100px;
+    height: 100px;
+}
+
+.image_default_signUp {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.signUpBtns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+.signUpBtn {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 5px;
+    border: 1px solid white; /* Ensure border color is explicitly defined */
+    cursor: pointer;
+    color: white; /* Button text color */
+    background-color: transparent; /* Ensure no background color initially */
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.signUpBtn:hover {
+    background-color: white; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+}

@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './Component/Navbar/navbar';
+import Home from './Pages/Home/home';
+import { useState,useEffect } from 'react';
+import{Route,Routes} from 'react-router-dom';
+import Video from './Pages/Video/video';
+import Profile from './Pages/Profile/profile';
+import VideoUpload from './Pages/VideoUpload/videoUpload';
+import SignUp from './Pages/SignUp/signUp';
+import axios from 'axios';
 function App() {
+
+  const [sideNavbar,setSideNavbar]= useState(true)
+
+  
+  const setSideNavbarFunc=(value)=>{
+      setSideNavbar(value)
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar setSideNavbarFunc={setSideNavbarFunc} sideNavbar={sideNavbar}/>
+      <Routes>
+        <Route path='/' element={<Home sideNavbar={sideNavbar}/>}/>
+        <Route path='/watch/:id' element={<Video/>}/>
+        <Route path='/user/:id' element={<Profile sideNavbar={sideNavbar}/>}/>
+        <Route path='/:id/upload' element={<VideoUpload/>}/>
+        <Route path='/signUp'  element={<SignUp/>}/>
+
+      </Routes>
+      
+
     </div>
   );
 }
